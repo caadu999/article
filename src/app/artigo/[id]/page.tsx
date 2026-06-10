@@ -2,6 +2,8 @@ import getArtigos from "@/lib/API/API";
 import styles from "@/app/artigo/[id]/id.module.scss";
 import Link from "next/link";
 
+export const dynamic = "force-static";
+
 type Props = {
   params: Promise<{
     id: number;
@@ -12,12 +14,12 @@ export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const artigos = await getArtigos();
   const detalhes = artigos.find((artigo) => artigo.id == id);
-  if (!detalhes) return
+  if (!detalhes) return;
 
   return {
     title: `${detalhes.authors[0].name} | Article`,
-    description: detalhes.summary
-  }
+    description: detalhes.summary,
+  };
 }
 
 export default async function DetalheArtigo({ params }: Props) {
