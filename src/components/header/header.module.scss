@@ -1,0 +1,39 @@
+.container {
+  width: 1500px;
+  max-width: 95%;
+
+  margin: 24px 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 28px;
+  align-items: center;
+  width: 100%;
+  background-color: #ebf1ef;
+  border-radius: 12px;
+  margin-bottom: 60px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.8em;
+
+    li {
+      list-style: none;
+      font-weight: 400;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

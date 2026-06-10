@@ -1,0 +1,42 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+  max-width: 400px;
+  gap: 8px;
+  margin: 16px;
+  height: 560px;
+  justify-content: space-around;
+  border: solid 1px grey;
+  padding: 24px;
+  border-radius: 16px;
+
+  img {
+    border-radius: 12px;
+    margin-bottom: 4px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__autor {
+    font-weight: 500;
+    font-size: 0.9em;
+  
+  }
+
+  &__texto {
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    line-height: 26px;
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
+}

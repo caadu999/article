@@ -1,0 +1,56 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  &__imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      border-radius: 16px;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+    }
+  }
+
+  &__publicado {
+    color: rgb(70, 70, 70);
+  }
+
+  &__autor {
+    background-color: #ebf1ef;
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+    font-weight: 400;
+    width: 748px;
+    text-align: center;
+  }
+
+  &__texto {
+    width: 800px;
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    margin: 40px;
+    background-color: #ebf1ef;
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+}

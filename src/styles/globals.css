@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Define o tamanho base e garante que a página ocupe toda a altura da tela */
+html, body {
+  height: 100%;
+}
+
+/* Melhora a legibilidade do texto */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Evita que imagens e vídeos estourem seus containers */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Evita que textos fiquem sem tamanho herdado em inputs e botões */
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  
+}
