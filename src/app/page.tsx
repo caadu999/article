@@ -1,7 +1,7 @@
 import Grid from "@/components/grid/grid";
 import styles from "./page.module.scss";
 
-export const reavlidate = 3600;
+export const revalidate = 3600;
 
 export default function Home() {
   return (

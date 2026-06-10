@@ -1,19 +1,26 @@
 import getArtigos from "@/lib/API/API";
-import styles from "@/app/artigo/[id]/id.module.scss";
+import styles from "@/app/artigo/[slug]/id.module.scss";
 import Link from "next/link";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const artigos = await getArtigos();
+  return artigos.map((artigo) => ({
+    slug: String(artigo.id),
+  }));
+}
+
 type Props = {
   params: Promise<{
-    id: number;
+    slug: string;
   }>;
 };
 
 export async function generateMetadata({ params }: Props) {
-  const { id } = await params;
+  const { slug } = await params;
   const artigos = await getArtigos();
-  const detalhes = artigos.find((artigo) => artigo.id == id);
+  const detalhes = artigos.find((artigo) => artigo.id == Number(slug));
   if (!detalhes) return;
 
   return {
@@ -23,9 +30,9 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function DetalheArtigo({ params }: Props) {
-  const { id } = await params;
+  const { slug } = await params;
   const artigos = await getArtigos();
-  const detalhes = artigos.find((artigo) => artigo.id == id);
+  const detalhes = artigos.find((artigo) => artigo.id == Number(slug));
   if (!detalhes) return <p>Artigo não encontrado.</p>;
 
   return (
